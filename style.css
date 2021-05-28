@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primaryFont:'Poppins', sans-serif;
+    --secondaryFont:'Odibee Sans', cursive;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--primaryFont);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+header nav {
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(223, 223, 223);
+}
+
+header nav .brandName img {
+    width: 100px;
+    margin: 0 4rem;
+}
+
+header nav .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    margin: 0 4rem;
+}
+
+header nav .menu li i {
+    font-size: 3rem;
+}
+
+header nav .menu li i:hover {
+    transform: rotate(-30deg);
+}
+
+header nav .menu li a {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+header nav .menu li a:hover {
+    color: rgb(64, 115, 255);
+    font-style: italic;
+}
+
+.menu .item7 a{
+    padding: 1rem 2rem;
+    background-color: white;
+}
+
+.menu .item7:hover {
+    transform: rotate(10deg);
+}
+
+.alert {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+/* [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Hero Section Styling ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] */
+
+.hero {
+    height: 80vh;
+}
+
+.hero .image {
+    height: 94vh;
+    background-image: url(images/heroBg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: relative;
+    margin: 2rem;
+}
+
+.hero .image::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.404);
+    opacity:0;
+    border-right: 20px solid rgb(255, 255, 255);;
+    transition: all 0.5s ease-in-out;
+}
+
+.hero .image:hover::after {
+    width: 40%;
+    opacity: 1;
+}
+
+.hero .image:hover .imgDes {
+    left: 4%;
+    opacity: 1;
+}
+
+.hero .image:hover .imgDes>h1 {
+    text-shadow: 0 0 5px cyan,
+    0 0 10px cyan,
+    0 0 20px cyan,
+    0 0 30px cyan,
+    0 0 40px cyan;
+}
+
+.image .imgDes {
+    width: 500px;
+    position: absolute;
+    top: 7%;
+    left: -30%;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.image .imgDes h1 {
+    font-size: 22rem;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    transition: all 2s ease-in-out;
+}
+
+
