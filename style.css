@@ -74,6 +74,7 @@ header nav .menu li a {
 header nav .menu li a:hover {
     color: rgb(64, 115, 255);
     font-style: italic;
+    font-weight: 600;
 }
 
 .menu .item7 {
