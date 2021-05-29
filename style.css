@@ -7,6 +7,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: var(--primaryFont);
 }
 
 :root {
@@ -18,7 +19,6 @@
 
 html {
     font-size: 62.5%;
-    font-family: var(--primaryFont);
 }
 
 a {
