@@ -1,198 +1,294 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: var(--primaryFont);
-}
-
-:root {
-    --primaryFont:'Poppins', sans-serif;
-    --secondaryFont:'Odibee Sans', cursive;
-    --tertiaryFont:'Limelight', cursive;
-    --quaternaryFont:'Odibee Sans', cursive;
-}
-
-::-webkit-scrollbar {
-    display: none;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+  font-family: "Raleway", sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 a {
-    color: black;
-    text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  color: black;
+  text-decoration: none;
+  display: block;
 }
 
-ul {
-    list-style: none;
+ul li {
+  list-style-type: none;
 }
 
-header nav {
-    height: 8vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(223, 223, 223);
+h2 {
+  font-family: "Josefin Sans", sans-serif;
 }
 
-header nav .brandName img {
-    width: 100px;
-    margin: 0 4rem;
+p {
+  font-family: "Josefin Slab", serif;
 }
 
-header nav .brandName .jordan {
-    width: 60px;
-    margin-left: 75rem;
+.nikeMain {
+  height: 100vh;
+  position: relative;
 }
 
-header nav .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 600px;
-    margin: 0 4rem;
-    position: relative;
+.nikeMain header {
+  background-color: #f0f0f0;
+  height: 7vh;
 }
 
-header nav .menu li i {
-    font-size: 3rem;
+.nikeMain header nav {
+  height: 7vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-header nav .menu li i:hover {
-    transform: rotate(-30deg);
+.nikeMain header nav .brandLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-header nav .menu li a {
-    font-size: 1.5rem;
-    font-weight: 600;
+.nikeMain header nav .brandLogo img {
+  width: 70px;
+  height: auto;
+  margin: 0 0 0 2rem;
 }
 
-header nav .menu li a:hover {
-    color: rgb(64, 115, 255);
-    font-style: italic;
-    font-weight: 600;
+.nikeMain header nav .rightSide {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 5rem 0 0;
 }
 
-.menu .item7 {
-    transition: all 0.5s ease-in-out;
+.nikeMain header nav .rightSide .shoppingBag a {
+  font-size: 2.5rem;
 }
 
-.menu .item7 a{
-    padding: 1rem 2rem;
-    background-color: white;
+.nikeMain header nav .rightSide .search a {
+  font-size: 2.5rem;
 }
 
-.menu .item7:hover {
-    transform: rotate(360deg);
+.nikeMain header nav .rightSide .hamburger input {
+  width: 27px;
+  height: 25px;
+  opacity: 0;
+  position: absolute;
+  top: 2%;
+  right: 6%;
+  z-index: 2;
 }
 
-.alert {
-    font-size: 1.3rem;
-    margin-bottom: 0;
+.nikeMain header nav .rightSide .hamburger input:checked ~ .hamburgerMenu {
+  top: 7%;
+  opacity: 1;
 }
 
-/* [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[ Hero Section Styling ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]] */
-
-.hero {
-    height: 80vh;
+.nikeMain header nav .rightSide .hamburger .hamburgerLines {
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 2%;
+  right: 6%;
+  z-index: 0;
 }
 
-.hero .image {
-    height: 94vh;
-    background-image: url(images/heroBg.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: top;
-    position: relative;
-    margin: 2rem;
+.nikeMain header nav .rightSide .hamburger .hamburgerLines span {
+  display: block;
+  background-color: black;
+  height: 4px;
+  width: 26px;
 }
 
-.hero .image::after {
-    content: '';
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 0%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.404);
-    opacity:0;
-    border-right: 20px solid rgb(255, 255, 255);;
-    transition: all 0.5s ease-in-out;
+.nikeMain header nav .rightSide .hamburger .hamburgerMenu {
+  position: absolute;
+  top: -100%;
+  right: 0%;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  z-index: 5;
+  background-color: #eeeeee;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
-.hero .image:hover::after {
-    width: 40%;
-    opacity: 1;
+.nikeMain header nav .rightSide .hamburger .hamburgerMenu .navMenu {
+  margin: 2rem;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 300px;
 }
 
-.hero .image:hover .imgDes {
-    left: 4%;
-    opacity: 1;
+.nikeMain header nav .rightSide .hamburger .hamburgerMenu .navMenu li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
 }
 
-
-.image .imgDes {
-    width: 500px;
-    position: absolute;
-    top: 7%;
-    left: -30%;
-    z-index: 2;
-    transition: all 0.5s ease-in-out;
-    opacity: 0;
+.nikeMain header nav .rightSide .hamburger .hamburgerMenu .navMenu li a {
+  font-size: 1.7rem;
 }
 
-.image .imgDes h1 {
-    font-size: 20rem;
-    font-family: var(--primaryFont);
-    line-height: 200px;
-    font-weight: 900;
-    color: rgba(255, 255, 255, 0.507);
-    transition: all 2s ease-in-out;
+.nikeMain header nav .rightSide .hamburger .hamburgerMenu .navMenu li i {
+  font-size: 1.7rem;
 }
 
-.image .imgDes hr {
-    height: 0.5rem;
-    background-color: rgb(255, 255, 255);
+.nikeMain .hero .introCard {
+  position: relative;
+  overflow: hidden;
 }
 
-.image .imgDes span {
-    font-size: 5rem;
-    font-family: var(--quaternaryFont);
-    font-weight: 400;
-    color: rgb(253, 253, 253);
-    text-transform: uppercase;
+.nikeMain .hero .introCard img {
+  height: 580px;
+  width: 95%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  display: block;
+  margin: 1rem auto;
 }
 
-.image .imgDes p {
-    font-size: 2rem;
-    font-family: var(--primaryFont);
-    font-weight: 700;
-    color: rgb(255, 255, 255);
+.nikeMain .hero .introCard .overlay {
+  position: absolute;
+  background-color: black;
+  width: 95%;
+  height: 580px;
+  bottom: 0%;
+  left: 2.5%;
+  -webkit-animation: overlay 3s forwards;
+          animation: overlay 3s forwards;
 }
 
-.image .imgDes a {
-    padding: 1rem 2rem;
-    width: 100%;
-    text-align: center;
-    display: block;
-    margin: 2rem 0;
-    font-size: 2rem;
-    font-family: var(--primaryFont);
-    font-weight: 600;
-    background-color: rgb(0, 132, 255);
-    transform: rotate(2.5deg);
+@-webkit-keyframes overlay {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 165px;
+  }
 }
 
-.image .imgDes a:hover {
-    color: black;
-    background-color: white;
-    transform: rotate(0deg);
+@keyframes overlay {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 165px;
+  }
 }
+
+.nikeMain .hero .introCard .description {
+  color: white;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  display: block;
+  width: 400px;
+  z-index: 1;
+  -webkit-animation: introcardDes 3s forwards;
+          animation: introcardDes 3s forwards;
+}
+
+@-webkit-keyframes introcardDes {
+  0% {
+    bottom: -30%;
+  }
+  100% {
+    bottom: -5%;
+  }
+}
+
+@keyframes introcardDes {
+  0% {
+    bottom: -30%;
+  }
+  100% {
+    bottom: -5%;
+  }
+}
+
+.nikeMain .hero .introCard .description h2 {
+  font-size: 1.8rem;
+}
+
+.nikeMain .hero .introCard .description p {
+  font-size: 1.5rem;
+  line-height: 20px;
+}
+
+.nikeMain .hero .introCard .description a {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 1rem 2rem;
+  background-color: white;
+  width: 100px;
+  margin: 1rem auto;
+}
+
+.nikeMain .hero .introCard .description a:hover {
+  background-color: #272727;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

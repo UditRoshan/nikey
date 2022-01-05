@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+$firstFont:'Raleway', sans-serif;
+$secondFont:'Reggae One', cursive;
+$thirdFont:'Josefin Sans', sans-serif;
+$fourthFont:'Josefin Slab', serif;
+
+*,*::after,*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: $firstFont;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+a {
+    font-family: $firstFont;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+h2 {
+    font-family: $thirdFont;
+}
+
+p {
+    font-family: $fourthFont;
+}
+
+@media (max-width: 600px) {
+    .nikeMain {
+    height: 100vh;
+    position: relative;
+    header {
+        background-color: rgb(240, 240, 240);
+        height: 7vh;
+        nav {
+            height: 7vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .brandLogo {
+                display: flex;
+                align-items: center;
+                img {
+                    width: 70px;
+                    height: auto;
+                    margin: 0 0 0 2rem;
+                }
+            }
+            .rightSide {
+                width: 100px;
+                display: flex;
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 0 5rem 0 0;
+                .shoppingBag {
+                    a {
+                        font-size: 2.5rem;
+                    }
+                }
+                .search {
+                    a {
+                        font-size: 2.5rem;
+                    }
+                }
+                .hamburger {
+                    input {
+                        width: 27px;
+                        height: 25px;
+                        opacity: 0;
+                        position: absolute;
+                        top: 2%;
+                        right: 6%;
+                        z-index: 2;
+                        
+
+                        &:checked ~ .hamburgerMenu {
+                            top: 7%;
+                            opacity: 1;
+                        }
+                    }
+                    .hamburgerLines {
+                        height: 25px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        position: absolute;
+                        top: 2%;
+                        right: 6%;
+                        z-index: 0;
+                        span {
+                            display: block;
+                            background-color: black;
+                            height: 4px;
+                            width: 26px;
+                        }
+                    }
+                    .hamburgerMenu {
+                        position: absolute;
+                        top: -100%;
+                        right: 0%;
+                        height: 100vh;
+                        width: 100%;
+                        opacity: 0;
+                        z-index: 5;
+                        background-color: rgb(238, 238, 238);
+                        transition: all 1s ease-in-out;
+                        .navMenu {
+                            margin: 2rem;
+                            padding: 0.5rem;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            height: 300px;
+                            li {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                height: 50px;
+                                a {
+                                    font-size: 1.7rem;
+                                }
+                                i {
+                                    font-size: 1.7rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .hero {
+        .introCard {
+            position: relative;
+            overflow: hidden;
+            img {
+                height: 580px;
+                width: 95%;
+                object-fit: cover;
+                object-position: center;
+                display: block;
+                margin: 1rem auto;
+            }
+            .overlay {
+                position: absolute;
+                background-color: rgb(0, 0, 0);
+                width: 95%;
+                height: 580px;
+                bottom: 0%;
+                left: 2.5%;
+                animation: overlay 3s forwards;
+            }
+            @keyframes overlay {
+                0% {
+                    height: 0%;
+                }
+                100% {
+                    height: 165px;
+                }
+            }
+
+            .description {
+                color: white;
+                position: absolute;
+                bottom: 0%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+                display: block;
+                width: 400px;
+                z-index: 1;
+                animation: introcardDes 3s forwards;
+
+                @keyframes introcardDes {
+                    0% {
+                        bottom: -30%;
+                    }
+                    100% {
+                        bottom: -5%;
+                    }
+                }
+
+                h2 {
+                    font-size: 1.8rem;
+                }
+                p {
+                    font-size: 1.5rem;
+                    line-height: 20px;
+                }
+                a {
+                    color: black;
+                    font-size: 1.2rem;
+                    font-weight: 800;
+                    padding: 1rem 2rem;
+                    background-color: white;
+                    width: 100px;
+                    margin: 1rem auto;
+                    
+
+                    &:hover {
+                        background-color: rgb(39, 39, 39);
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
